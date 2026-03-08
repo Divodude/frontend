@@ -1,0 +1,7 @@
+fastapi
+uvicorn
+python-multipart
+websockets
+sqlalchemy
+bcrypt
+python-jose[cryptography]
