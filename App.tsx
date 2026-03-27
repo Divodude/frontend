@@ -93,6 +93,7 @@ const App = () => {
   const myIdRef = useRef('');
   const myNameRef = useRef('');
   const friendsRef = useRef<{ [id: string]: User }>({});
+  const handleIncomingRef = useRef<Function | null>(null);
 
   // Keep refs in sync so closures always have latest values
   useEffect(() => {
@@ -165,7 +166,10 @@ const App = () => {
 
     ws.current.onmessage = (e: any) => {
       try {
-        handleIncoming(JSON.parse(e.data));
+        const msg = JSON.parse(e.data);
+        if (handleIncomingRef.current) {
+          handleIncomingRef.current(msg);
+        }
       } catch (err) {
         console.error('WS parse error', err);
       }
@@ -197,8 +201,7 @@ const App = () => {
       const data = await resp.json();
       if (resp.ok) {
         setToken(data.access_token);
-        // Fallback for demo purposes - normally backend dictates this from token
-        setMyId(loginUsername);
+        setMyId(data.user_id);
         setMyName(loginUsername.toUpperCase());
         connect(data.access_token);
       } else {
@@ -249,8 +252,7 @@ const App = () => {
   };
 
   // ── Incoming message router ───────────────────────────────────────────────
-  const handleIncoming = useCallback(
-    (msg: any) => {
+  const handleIncoming = (msg: any) => {
       switch (msg.type) {
         case 'online_users': {
           const others: User[] = (msg.users as User[]).filter(
@@ -310,10 +312,11 @@ const App = () => {
           handleCandidate(msg);
           break;
       }
-    },
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-    [],
-  );
+  };
+
+  useEffect(() => {
+    handleIncomingRef.current = handleIncoming;
+  }, [handleIncoming]);
 
   // ── Friend actions ────────────────────────────────────────────────────────
   const sendFriendRequest = (user: User) => {
