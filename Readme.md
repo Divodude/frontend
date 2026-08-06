@@ -29,9 +29,7 @@ Connect is a modern real-time communication app that enables secure authenticati
 
 ## 📸 Screenshots
 
-| Login / Register | Friends | Video Calling |
-|:----------------:|:-------:|:-------------:|
-| ![Login](./screenshots/WhatsApp%20Image%202026-03-27%20at%2016.46.05%20(1).jpeg) | ![Friends](./screenshots/WhatsApp%20Image%202026-03-27%20at%2016.46.05.jpeg) | ![Video Call](./screenshots/WhatsApp%20Image%202026-03-27%20at%2016.46.36.jpeg) |
+![Connect App Screenshots](./assets/app_preview.png)
 
 ---
 
