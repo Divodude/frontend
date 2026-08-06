@@ -1,0 +1,18 @@
+{"_e":"root:init","_t":1786014025161,"format":"v0-jsonl","version":"57.0.12"}
+{"_e":"env:mode","_t":1786014025198,"nodeEnv":"development","babelEnv":"development","mode":"development"}
+{"_e":"env:load","_t":1786014025309,"mode":"development","files":[],"env":{}}
+{"_e":"devserver:start","_t":1786014040035,"mode":"development","web":true,"baseUrl":"","asyncRoutes":false,"routerRoot":"../..\\..\\app","serverComponents":false,"serverActions":false,"serverRendering":false,"apiRoutes":false,"exporting":false}
+{"_e":"metro:config","_t":1786014073070,"serverRoot":"../..\\..","projectRoot":"../..\\..","exporting":false,"flags":{"autolinkingModuleResolution":false,"serverActions":false,"serverComponents":false,"reactCompiler":false,"optimizeGraph":false,"treeshaking":false,"logbox":false}}
+{"_e":"expo:dev-tools-plugin:load","_t":1786014087200,"plugins":[]}
+{"_e":"metro:instantiate","_t":1786014108334,"atlas":false,"workers":8,"host":"::","port":8081}
+{"_e":"metro:bundling:started","_t":1786014110842,"id":"1","platform":"web","environment":null,"entry":"index.js"}
+{"_e":"metro:bundling:failed","_t":1786014189629,"id":"1","message":"SyntaxError: E:\\Learning\\connecta\\frontend\\src\\utils\\webrtc.web.ts: Unexpected token, expected \",\" (27:6)\n\n  25 |   return (\n  26 |     <video\n> 27 |       ref={videoRef}\n     |       ^\n  28 |       autoPlay\n  29 |       playsInline\n  30 |       muted={zOrder === 1} // Mute local preview","importStack":null,"filename":"src\\utils\\webrtc.web.ts","targetModuleName":null,"originModulePath":null}
+{"_e":"root:init","_t":1786014325490,"format":"v0-jsonl","version":"57.0.12"}
+{"_e":"env:mode","_t":1786014325491,"nodeEnv":"development","babelEnv":"development","mode":"development"}
+{"_e":"env:load","_t":1786014325498,"mode":"development","files":[],"env":{}}
+{"_e":"devserver:start","_t":1786014325836,"mode":"development","web":true,"baseUrl":"","asyncRoutes":false,"routerRoot":"../..\\..\\app","serverComponents":false,"serverActions":false,"serverRendering":false,"apiRoutes":false,"exporting":false}
+{"_e":"metro:config","_t":1786014326416,"serverRoot":"../..\\..","projectRoot":"../..\\..","exporting":false,"flags":{"autolinkingModuleResolution":false,"serverActions":false,"serverComponents":false,"reactCompiler":false,"optimizeGraph":false,"treeshaking":false,"logbox":false}}
+{"_e":"expo:dev-tools-plugin:load","_t":1786014326797,"plugins":[]}
+{"_e":"metro:instantiate","_t":1786014332999,"atlas":false,"workers":8,"host":"::","port":8081}
+{"_e":"metro:bundling:started","_t":1786014344923,"id":"1","platform":"web","environment":null,"entry":"index.js"}
+{"_e":"metro:bundling:done","_t":1786014353155,"id":"1","total":295,"ms":8231.8106}
